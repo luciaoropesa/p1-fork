@@ -11,7 +11,7 @@ git checkout
 Primero, tuve que copiarme el repositorio del fork dado en mi cuenta de github. Una vez hecho esto, creo el .txt para poder ir 
 comentando el resto de procedimientos. 
 
-1. git clone https://github.com/gitt-3-pat/p1   ------> más abajo (línea 115) explico el fallo al haber usado esta dirección 
+1. git clone https://github.com/gitt-3-pat/p1   ------> más abajo (línea 121) explico el fallo al haber usado esta dirección 
 ------------- Impreso en la terminal: 
 Cloning into 'p1'...
 remote: Enumerating objects: 6, done.
@@ -119,12 +119,12 @@ remote: Permission to gitt-3-pat/p1.git denied to luciaoropesa.
 fatal: unable to access 'https://github.com/gitt-3-pat/p1/': The requested URL returned error: 403
 --------
 Me da error porque estoy tratando de subir los cambios al repositorio original del profesor y Git da error, ya que debo subirlos a mi propio
-repositorio. Para ello hago uso del siguiente comando "git remote set-url origin https://github.com/luciaoropesa/p1-fork.git", consiguendo cambiar 
+repositorio. Para ello hago uso del siguiente comando "git remote set-url origin https://github.com/luciaoropesa/p1.git", consiguendo cambiar 
 a la url des mi propio repositorio. Así conseguiré cambiar la dirección. 
 Para comprobarlo, hago uso del comando " git remote -v", que devuelve lo siguiente por pantalla: 
 -----------Impreso por pantalla: 
-origin  https://github.com/luciaoropesa/p1-fork.git (fetch)
-origin  https://github.com/luciaoropesa/p1-fork.git (push)
+origin  https://github.com/luciaoropesa/p1.git (fetch)
+origin  https://github.com/luciaoropesa/p1.git (push)
 -------------
 Por tanto, ya está listo para poder hacer push a mi propio repositorio. 
 Antes de nada, vuelvo a guardar el archivo con "add" y "commit" para enviar la nueva versión a la nube. Si no lo guardase, mandaría hasta la
@@ -157,9 +157,9 @@ Writing objects: 100% (3/3), 417 bytes | 417.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: 
 remote: Create a pull request for 'rama_prueba' on GitHub by visiting:
-remote:      https://github.com/luciaoropesa/p1-fork/pull/new/rama_prueba
+remote:      https://github.com/luciaoropesa/p1/pull/new/rama_prueba
 remote: 
-To https://github.com/luciaoropesa/p1-fork.git
+To https://github.com/luciaoropesa/p1.git
  * [new branch]      rama_prueba -> rama_prueba
  ---------------------------
 Con esto ya me estaría asegurando que la rama es visible para todos los usuarios.
@@ -174,6 +174,7 @@ vuelvo a la rama "main", veo que no cuento con ese archivo.
 
 Por último, sólo queda volver a guardar los cambios realizados en este .txt y mandarlo a la nube, tal y como hemos ido aprendiendo durante la 
 práctica. 
+
 
 
 
