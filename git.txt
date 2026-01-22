@@ -11,7 +11,7 @@ git checkout
 Primero, tuve que copiarme el repositorio del fork dado en mi cuenta de github. Una vez hecho esto, creo el .txt para poder ir 
 comentando el resto de procedimientos. 
 
-1. git clone https://github.com/gitt-3-pat/p1
+1. git clone https://github.com/gitt-3-pat/p1   ------> más abajo (línea 115) explico el fallo al haber usado esta dirección 
 ------------- Impreso en la terminal: 
 Cloning into 'p1'...
 remote: Enumerating objects: 6, done.
@@ -112,5 +112,20 @@ Realmente sí, pero la forma de trabajar con ctrl+s (guardar normal un bloc de n
                     si realizo algún cambio nuevo ya que no guarda cambios futuros (digamos que no trabaja de manera "online"). 
 
 5. git push origin main
+Con este comando lo que hago es enviarle toda la información a la nube. 
+Al ejecutar el comando desde la rama main (es donde estoy), obtengo lo siguente. 
+------Impreso en la terminal: 
+remote: Permission to gitt-3-pat/p1.git denied to luciaoropesa.
+fatal: unable to access 'https://github.com/gitt-3-pat/p1/': The requested URL returned error: 403
+--------
+Me da error porque estoy tratando de subir los cambios al repositorio original del profesor y Git da error, ya que debo subirlos a mi propio
+repositorio. Para ello hago uso del siguiente comando "git remote set-url origin https://github.com/luciaoropesa/p1-fork.git", consiguendo cambiar 
+a la url des mi propio repositorio. Así conseguiré cambiar la dirección. 
+Para comprobarlo, hago uso del comando " git remote -v", que devuelve lo siguiente por pantalla: 
+-----------Impreso por pantalla: 
+origin  https://github.com/luciaoropesa/p1-fork.git (fetch)
+origin  https://github.com/luciaoropesa/p1-fork.git (push)
+-------------
+Por tanto, ya está listo para poder hacer push a mi propio repositorio. 
 
 
