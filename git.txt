@@ -127,5 +127,54 @@ origin  https://github.com/luciaoropesa/p1-fork.git (fetch)
 origin  https://github.com/luciaoropesa/p1-fork.git (push)
 -------------
 Por tanto, ya está listo para poder hacer push a mi propio repositorio. 
+Antes de nada, vuelvo a guardar el archivo con "add" y "commit" para enviar la nueva versión a la nube. Si no lo guardase, mandaría hasta la
+última versión hecha con "commit". 
+
+6. git checkout -b rama_prueba
+Con este comando le estoy diciendo que cree una rama nueva y que se cambie a ella inmediatamente para poder trabajar desde ahí. 
+Esto hace que la rama "main" quede con los cambios anteriores y para aplicar y probar nuevos cambios, puedo usar esta rama y después 
+mandarlos a la principal. 
+------Impreso en la terminal: 
+Switched to a new branch 'rama_prueba'
+-------------
+
+
+Por tanto, ya tengo creada la rama de prueba. Para ir moviendome por las diferentes ramas, bastaría con poner "git checkout nombre_rama".
+----Imrpimo por pantalla: 
+M       git.txt
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+---------------------
+Por tanto, ya me habría cambiado de rama a la principal. 
+
+Además, para dejar creada la rama y que sea accesible para cualquier persona que entre en mi enlace de GitHub, debo hacer un push ("git push origin rama_prueba"). 
+----Imprimo por pantalla: 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 417 bytes | 417.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'rama_prueba' on GitHub by visiting:
+remote:      https://github.com/luciaoropesa/p1-fork/pull/new/rama_prueba
+remote: 
+To https://github.com/luciaoropesa/p1-fork.git
+ * [new branch]      rama_prueba -> rama_prueba
+ ---------------------------
+Con esto ya me estaría asegurando que la rama es visible para todos los usuarios.
+
+
+
+Para hacer unas pruebas y comprobar el funcionamiento de una nueva rama, voy a crear un archivo en la carpeta que voy a usar sólo para 
+rama_nueva. Hago uso de "git add archivo_rama.txt" y " git commit -m "probando cambios en el archivo creado para la nueva rama" ". 
+¿Qué pasa con esto? Las ramas son independientes. Esto quiere decir que el archivo .txt creado para la rama_prueba NO se ve desde la rama "main". 
+Por tanto, cuando esté en rama_prueba podré ver en la carpeta p1 (desde la izquierda) que cuento con "archivo_rama.txt"; en cambio, si 
+vuelvo a la rama "main", veo que no cuento con ese archivo. 
+
+Por último, sólo queda volver a guardar los cambios realizados en este .txt y mandarlo a la nube, tal y como hemos ido aprendiendo durante la 
+práctica. 
+
+
 
 
