@@ -137,6 +137,8 @@ mandarlos a la principal.
 ------Impreso en la terminal: 
 Switched to a new branch 'rama_prueba'
 -------------
+
+
 Por tanto, ya tengo creada la rama de prueba. Para ir moviendome por las diferentes ramas, bastaría con poner "git checkout nombre_rama".
 ----Imrpimo por pantalla: 
 M       git.txt
@@ -144,6 +146,24 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ---------------------
 Por tanto, ya me habría cambiado de rama a la principal. 
+
+Además, para dejar creada la rama y que sea accesible para cualquier persona que entre en mi enlace de GitHub, debo hacer un push ("git push origin rama_prueba"). 
+----Imprimo por pantalla: 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 417 bytes | 417.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'rama_prueba' on GitHub by visiting:
+remote:      https://github.com/luciaoropesa/p1-fork/pull/new/rama_prueba
+remote: 
+To https://github.com/luciaoropesa/p1-fork.git
+ * [new branch]      rama_prueba -> rama_prueba
+ ---------------------------
+Con esto ya me estaría asegurando que la rama es visible para todos los usuarios.
+
 
 
 Para hacer unas pruebas y comprobar el funcionamiento de una nueva rama, voy a crear un archivo en la carpeta que voy a usar sólo para 
