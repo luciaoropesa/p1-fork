@@ -96,4 +96,21 @@ Changes to be committed:
         new file:   prueba.txt
 ---------
 Una vez tengo el git.txt, aplico el commit. 
+Obtengo lo siguiente: 
+----Impreso por pantalla: 
+[main deb467f] añadiendo git.txt con la documentación de la práctica
+ 2 files changed, 100 insertions(+)
+ create mode 100644 git.txt
+ create mode 100644 prueba.txt
+ -----------------
+
+Esto quiere decir que tiene 2 archivos (prueba.txt y git.txt) guardados en la historia nuestro ordenador local. 
+¿Pero antes no estaban guardados?
+Realmente sí, pero la forma de trabajar con ctrl+s (guardar normal un bloc de notas) y un commit es diferente: 
+  - Guardando normal -> si borro información y guardo, jamás podré volver a recuperarla. Es similar a decir que sólo trabaja a tiempo presente.
+  - Usando commit -> haga lo haga, todo queda registrado y puedo volver a acceder a ello. Lo malo es que tengo que repetir todo el proceso anterior
+                    si realizo algún cambio nuevo ya que no guarda cambios futuros (digamos que no trabaja de manera "online"). 
+
+5. git push origin main
+
 
