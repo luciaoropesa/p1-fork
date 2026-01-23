@@ -24,6 +24,7 @@ Sirve para descargar el repositorio de la nube (GitHub()) al ordenador local des
 puedo encontrar el mismo archivo README.md. Si hubiera más archivos, también los encontraría dentro de la carpeta 'p1'.  
 
 2. git status 
+Con este comando podremos ver si hay archivos dentro de nuestra carpeta que no estén guardados (por ej, que se acaben de crear o que estén editados)
 Para ello, ejecuto 'cd p1' para poder trabajar dentro de la carpeta y que los comandos funcionen. 
 -------Impreso en la terminal: 
 On branch main
@@ -45,8 +46,8 @@ Aquí vemos la diferencia. Nos devuelve un "tienes este nuevo archivo creado y e
 En el caso de querer guardarlo, haz uso de "git add" "). 
 
 3. git add prueba.txt
-Para que reconozca el archivo, debo añadirlo. 
-Aquí no devuelve nada por pantalla, pero si vuelvo a ejecutar "git status", obtengo lo siguiente: 
+Para que reconozca el archivo, debo añadirlo (más que añadirlo, es guardarlo ya editado).
+Aquí no devuelve nada por pantalla, pero si vuelvo a ejecutar "git status" para ver si se ha producido algún cambio, obtengo lo siguiente: 
 ------------Impreso por pantalla: 
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -71,7 +72,7 @@ Changes not staged for commit:
         modified:   prueba.txt
 ----------------
 Lo que quiere decir que al haber editado el archivo, los cambios no se han guardado. Para que se guarden, puedo hacer uso de "git add". 
-Para comprobar que l modifiación de ha guardado, vuelvo a hacer uso de git status
+Para comprobar que la modificación de ha guardado, vuelvo a hacer uso de "git status".
 -----Impreso por pantalla: 
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -84,7 +85,8 @@ Como puedo ver, los cambios se han guardado en el archivo.
 
 Si volviera a editarlo, tendría que seguir el mismo procedimiento (usar "git add" para guardar cambios y "git status" para comprobarlo).
 
-4. git commit -m "añadiendo git.txt con la documentación de la práctica"
+4. git commit -m "añadiendo git.txt con la documentación de la práctica". 
+Con este comando lo que se hace es guardar el archivo en el repositorio local. Más abajo explicaré más en detalle. 
 Para ello, primero debo añadir el git.txt a la carpeta "p1" siguiendo el procedimiento anterior. 
 ----Impreso por pantalla: 
 On branch main
@@ -108,8 +110,9 @@ Esto quiere decir que tiene 2 archivos (prueba.txt y git.txt) guardados en la hi
 ¿Pero antes no estaban guardados?
 Realmente sí, pero la forma de trabajar con ctrl+s (guardar normal un bloc de notas) y un commit es diferente: 
   - Guardando normal -> si borro información y guardo, jamás podré volver a recuperarla. Es similar a decir que sólo trabaja a tiempo presente.
-  - Usando commit -> haga lo haga, todo queda registrado y puedo volver a acceder a ello. Lo malo es que tengo que repetir todo el proceso anterior
-                    si realizo algún cambio nuevo ya que no guarda cambios futuros (digamos que no trabaja de manera "online"). 
+  - Usando commit -> haga lo haga, todo queda registrado y puedo volver a acceder a ello, gracias a la instantánea tomada al ejecutarlo.
+                    Lo malo es que tengo que repetir todo el proceso anterior si realizo algún cambio nuevo ya que no guarda cambios presentes
+                    (digamos que no trabaja de manera "online"). 
 
 5. git push origin main
 Con este comando lo que hago es enviarle toda la información a la nube. 
@@ -120,15 +123,15 @@ fatal: unable to access 'https://github.com/gitt-3-pat/p1/': The requested URL r
 --------
 Me da error porque estoy tratando de subir los cambios al repositorio original del profesor y Git da error, ya que debo subirlos a mi propio
 repositorio. Para ello hago uso del siguiente comando "git remote set-url origin https://github.com/luciaoropesa/p1.git", consiguendo cambiar 
-a la url des mi propio repositorio. Así conseguiré cambiar la dirección. 
+a la url de mi propio repositorio. 
 Para comprobarlo, hago uso del comando " git remote -v", que devuelve lo siguiente por pantalla: 
 -----------Impreso por pantalla: 
 origin  https://github.com/luciaoropesa/p1.git (fetch)
 origin  https://github.com/luciaoropesa/p1.git (push)
 -------------
 Por tanto, ya está listo para poder hacer push a mi propio repositorio. 
-Antes de nada, vuelvo a guardar el archivo con "add" y "commit" para enviar la nueva versión a la nube. Si no lo guardase, mandaría hasta la
-última versión hecha con "commit". 
+Antes de nada, vuelvo a guardar el archivo con "add" y "commit" para enviar la nueva versión a la nube. Si no lo guardase, estaría mandando
+hasta la última versión hecha con "commit" y no la actual que quiero. 
 
 6. git checkout -b rama_prueba
 Con este comando le estoy diciendo que cree una rama nueva y que se cambie a ella inmediatamente para poder trabajar desde ahí. 
@@ -137,7 +140,6 @@ mandarlos a la principal.
 ------Impreso en la terminal: 
 Switched to a new branch 'rama_prueba'
 -------------
-
 
 Por tanto, ya tengo creada la rama de prueba. Para ir moviendome por las diferentes ramas, bastaría con poner "git checkout nombre_rama".
 ----Imrpimo por pantalla: 
@@ -173,8 +175,8 @@ Por tanto, cuando esté en rama_prueba podré ver en la carpeta p1 (desde la izq
 vuelvo a la rama "main", veo que no cuento con ese archivo. 
 
 Por último, sólo queda volver a guardar los cambios realizados en este .txt y mandarlo a la nube, tal y como hemos ido aprendiendo durante la 
-práctica. 
-
+práctica.  
+ 
 
 
 
